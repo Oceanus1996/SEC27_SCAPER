@@ -1,0 +1,11 @@
+# Safety-evaluation / analysis stage (src/eval, scripts).
+# The classifier reuses the Unsafe-Diffusion five heads (Qu et al., CCS 2023)
+# on an OpenCLIP ViT-L-14-quickgelu backbone; SS uses the same encoder.
+torch>=2.0
+open_clip_torch>=2.20
+Pillow>=9.0
+numpy>=1.24
+
+# Note: text analysis (scene lifting / decomposition) runs a separate, locally
+# deployed Qwen3.5-9B-Base and is not required to reproduce the evaluation tables.
+# If running that stage, install transformers>=4.40 and accelerate.
