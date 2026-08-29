@@ -13,11 +13,9 @@ This artifact accompanies the paper *SCAPER: Compositional Jailbreaks against Un
 ```text
 src/decompose/              Textual Scene Lifting + Scene-Level Decomposition
   step1.py … step4.py       four-stage decomposition prompt templates
-  step1_5.py step1_7.py     intermediate variants
   step_all.py               single-pass variant
   common.py                 dataset / prompt loading and generation driver
   measure.py                measurement-only batch pipeline (3 analysis steps)
-  qwen_base.py              direct Qwen3.5-9B-Base calls for prompt testing
 
 src/step5_scene_safety/     scene-level safety scoring
   model.py                  five-head classifier wrapper
@@ -44,15 +42,12 @@ data/
   rq1_data.xlsx             per-prompt bypass / harm results across three Unity tiers
                             → supports Table 2 (RQ1) and Table 4 (RQ3)
 
-  ss.xlsx, ss.csv           semantic-similarity values — see §4; not usable as-is
+
 
   annotations/
-    master_annotation_table.csv
-                            earlier CSV version of the annotation table
-
+ 
     stage_validation_50.csv
                             three-reviewer validation of the 50-prompt subset
 
-tables_tab2_filled.tex      LaTeX source for Table 2 with per-category N filled in
 
 requirements.txt            evaluation-stage dependencies
